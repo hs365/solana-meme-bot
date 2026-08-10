@@ -1,0 +1,42 @@
+# Solana Meme Coin Trading Bot - Python Dependencies
+
+# Solana interaction
+solana>=0.30.0
+solana.rpc.api>=0.30.0
+solders>=0.18.0
+solders>=0.18.0
+
+# Jupiter aggregator for swap
+jupiter>=1.3.0
+
+# HTTP & async
+aiohttp>=3.9.0
+asyncio>=3.4.3
+httpx>=0.25.0
+
+# Configuration
+python-dotenv>=1.0.0
+
+# Telegram notifications
+python-telegram-bot>=20.0
+
+# Logging
+colorlog>=6.8.0
+rich>=13.7.0
+
+# Time utilities
+pytz>=2024.1
+python-dateutil>=2.8.2
+
+# Environment variables
+pyyaml>=6.0.1
+
+# Data structures
+pandas>=2.1.0
+numpy>=1.26.0
+
+# Redis (optional - for distributed mode)
+redis>=5.0.0
+
+# Web3 utilities
+web3>=6.15.0
