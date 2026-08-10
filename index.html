@@ -1,9 +1,357 @@
-<!DOCTYPE sollan html>
-html lang="l�n-CN">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solana  山䵡�����ޣJH�I���Ё���м܃��Y��Yz��T�R&�C��F�F�S���WF��S�&FW67&�F���"6��FV�C�##F��W"WF����F�"V��gV�.
-�[(��8����*����*yl:�i/ZN*
-.+��Z�]j�+	>�;^<�*��
-�*.+�.���M^-N*�=>+.+�^*N+-+�*�*�+�+*N*�*.*n+�=N*�+�+�-N*n*�*�+.*.*�+n+n+�+�*�*N*n**�*�*>+�-N*.*�**�*+.*�*�*�*>*�*~+�=.*�*�*�*�*~*�*�*.*^*�*~*�*~+�-N*.*�*�*�*+N+�*�*�+.*�*^+N++^+.+�+�=.*�*�*.*�*�***�*~*�*�+.*�*^*�*~*�*~+�+�=.*�*�*�*�*+*~*�*~*�*�*N*�*�*�*�*~+�*�*�*�*�*�*^*�*�*�*^*�*~*�*�*�*^*�*^+>+�=.*�*�*^+.**�*�*�*~+�+N+.*^*�*^*^*�*N*N*^*N*�*�*^*�*^*^*�*�*N*�*�*^*�*N*N*N*�*^*�=N*^*�*�*^*N*N*^*�*�*^**^*�*~*�*^**^*N*N*�*N**^*^**�*~*�*�*�*N*N*�*~*�*�**�*^*N*.*^*N*�*�**�*^**�*�*�*^*^*�**^*N*�*~*�**^*�*^*^**�*^*N*�*^*N*�**�*^*^**�*^*N*�*^*�**^**�*^*�
+<title>Solana土狗狙击机器人 | 打刚迁移外盘的新币</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0d0d0d;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+  .hero {
+    text-align: center;
+    padding: 80px 0 60px;
+    background: linear-gradient(180deg, #0a1a0a 0%, #0d0d0d 100%);
+    border-bottom: 1px solid #1a2a1a;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(0,255,136,0.1);
+    color: #00ff88;
+    border: 1px solid rgba(0,255,136,0.3);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .hero h1 span { color: #00ff88; }
+  .hero p { font-size: 17px; color: #888; max-width: 580px; margin: 0 auto 30px; }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #00ff88;
+    color: #0a0a0a;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 5px;
+  }
+  .hero-cta.secondary {
+    background: transparent;
+    color: #00ff88;
+    border: 1px solid #00ff88;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  .stat { text-align: center; }
+  .stat-num { font-size: 28px; font-weight: 800; color: #00ff88; }
+  .stat-label { font-size: 12px; color: #666; margin-top: 4px; }
+
+  .section { padding: 60px 0; border-bottom: 1px solid #1a1a1a; }
+  .section-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .section-sub {
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, #0f2a0f, #112211);
+    border: 1px solid rgba(0,255,136,0.3);
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .highlight-box h2 { font-size: 22px; color: #00ff88; margin-bottom: 10px; }
+  .highlight-box p { font-size: 15px; color: #aaa; max-width: 520px; margin: 0 auto; }
+
+  .flow-steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .flow-step { text-align: center; flex: 1; min-width: 140px; max-width: 180px; }
+  .flow-num {
+    width: 48px; height: 48px;
+    background: rgba(0,255,136,0.1);
+    border: 2px solid #00ff88;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; font-weight: 800; color: #00ff88;
+    margin: 0 auto 12px;
+  }
+  .flow-step h4 { font-size: 14px; color: #fff; margin-bottom: 6px; }
+  .flow-step p { font-size: 12px; color: #666; }
+  .flow-arrow { font-size: 24px; color: #333; }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .feature-card {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 24px;
+    transition: border-color 0.2s;
+  }
+  .feature-card:hover { border-color: #00ff88; }
+  .feature-icon { font-size: 32px; margin-bottom: 12px; }
+  .feature-card h3 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .feature-card p { font-size: 13px; color: #666; line-height: 1.5; }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .why-card {
+    background: #111;
+    border: 1px solid #1a1a1a;
+    border-radius: 10px;
+    padding: 18px;
+  }
+  .why-card h4 { font-size: 14px; color: #fff; margin-bottom: 6px; }
+  .why-card p { font-size: 13px; color: #555; }
+  .why-card strong { color: #00ff88; }
+
+  .pricing-card {
+    background: linear-gradient(135deg, #0f1f0f, #141414);
+    border: 2px solid #00ff88;
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .price-tag { font-size: 48px; font-weight: 800; color: #00ff88; }
+  .price-tag span { font-size: 18px; color: #666; }
+  .price-note { color: #666; font-size: 13px; margin: 8px 0 24px; }
+  .price-features { list-style: none; text-align: left; margin: 0 0 30px; }
+  .price-features li { padding: 8px 0; font-size: 14px; color: #aaa; border-bottom: 1px solid #1a1a1a; }
+  .price-features li::before { content: "✅ "; }
+
+  .faq-list { max-width: 600px; margin: 0 auto; }
+  .faq-item {
+    background: #111;
+    border: 1px solid #1a1a1a;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+  }
+  .faq-q { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+  .faq-a { font-size: 13px; color: #666; }
+
+  .footer { text-align: center; padding: 40px 0; border-top: 1px solid #1a1a1a; }
+  .footer p { font-size: 13px; color: #444; }
+  .footer .contact { color: #00ff88; margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">🎯 核心逻辑：只打刚迁移外盘的币</div>
+    <h1>Solana <span>土狗狙击机器人</span></h1>
+    <p>自动追踪 <strong>pump.fun 迁移外盘</strong> 的新币，捕捉大户启动瞬间，TG实时推送，全自动运行</p>
+    <div>
+      <a href="#pricing" class="hero-cta">🚀 立即获取</a>
+      <a href="#why" class="hero-cta secondary">💡 为什么不一样</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">外盘迁移</div><div class="stat-label">第一层滤</div></div>
+      <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">全自动运行</div></div>
+      <div class="stat"><div class="stat-num">¥99</div><div class="stat-label">终身使用</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why">
+  <div class="container">
+    <h2 class="section-title">为什么<span>只打外盘</span>？</h2>
+    <p class="section-sub">这是本 bot 与市面上所有土狗机器人的根本区别</p>
+    <div class="highlight-box">
+      <h2>🛡️ 外盘迁移 = 双重安全保障</h2>
+      <p>币在 pump.fun 内盘时，开发者随时可以增发、 rug。迁移到 Raydium/pumpswap 外盘后，池子被第三方锁定——<strong>跑不了</strong>。</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <h4>🚫 内盘风险</h4>
+        <p>开发者可随时增发代币，内盘池子无锁， rug零成本</p>
+      </div>
+      <div class="why-card">
+        <h4>✅ <span style="color:#00ff88">外盘优势</span></h4>
+        <p>池子第三方锁定，持币人数经天然筛选，有真实外部流动性</p>
+      </div>
+      <div class="why-card">
+        <h4>🎯 本 bot 的逻辑</h4>
+        <p>发现迁移外盘的新币 → 追踪成交量 → 放量时自动买入</p>
+      </div>
+      <div class="why-card">
+        <h4>📊 数据验证</h4>
+        <p>外盘迁移本身就说明了开发者的实力和社区认可度</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">工作<span>流程</span></h2>
+    <div class="flow-steps" style="margin-top: 40px;">
+      <div class="flow-step">
+        <div class="flow-num">1</div>
+        <h4>监控迁移</h4>
+        <p>pump.fun 新币迁移到 Raydium/pumpswap 外盘</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-num">2</div>
+        <h4>追踪成交量</h4>
+        <p>外盘迁移后，持续监控买卖成交量变化</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-num">3</div>
+        <h4>放量自动买入</h4>
+        <p>成交量突然放大 → 触发阈值 → 自动买入</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-num">4</div>
+        <h4>自动止盈止损</h4>
+        <p>50%/100%/200%分批止盈，-30%止损，TG实时推送</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <div class="container">
+    <h2 class="section-title">核心<span>功能</span></h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>只打迁移外盘的币</h3>
+        <p>只操作 pump.fun 迁移到 Raydium/pumpswap 外盘的币，内盘土狗一律不做</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📡</div>
+        <h3>24/7 自动监控</h3>
+        <p>持续扫描链上新币迁移动态，不漏过任何一个刚迁移的机会</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>TG 实时推送</h3>
+        <p>买入/卖出/止盈/止损，秒级推送，手机看消息就能跟单</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>多层止盈止损</h3>
+        <p>50%/100%/200%分批止盈，-30%止损，机械执行不手软</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💧</div>
+        <h3>流动性门槛</h3>
+        <p>只做流动性超过 $5000 的币，拒绝土狗归零风险</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎮</div>
+        <h3>模拟盘测试</h3>
+        <p>Dry Run 模拟盘练手，确认策略有效再开实盘，零成本验证</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="container">
+    <h2 class="section-title">简单<span>定价</span></h2>
+    <div class="pricing-card">
+      <div class="price-tag">¥99 <span>/ 终身</span></div>
+      <p class="price-note">一次付费，永久使用，后续更新免费</p>
+      <ul class="price-features">
+        <li>完整机器人源码 + 配置文件</li>
+        <li>详细安装配置教程</li>
+        <li>TG机器人申请协助</li>
+        <li>永久免费更新</li>
+        <li>一对一配置答疑</li>
+      </ul>
+      <a href="#" class="hero-cta" style="width:100%;justify-content:center;">💬 私信购买</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">常见<span>问题</span></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Q: 和其他土狗机器人的区别是什么？</div>
+        <div class="faq-a">A: 最大的区别——我们只打刚迁移到外盘的新币。外盘迁移本身就是过滤器，锁定了池子，跑不了。大部分土狗机器人在内盘就冲进去，我们只做有外部流动性验证的。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q: 需要自己租服务器吗？</div>
+        <div class="faq-a">A: 不需要。自己电脑就能跑，24小时开着即可。也可以用云服务器。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q: 真的能赚钱吗？</div>
+        <div class="faq-a">A: 土狗本身风险极高，没有人能保证盈利。机器人做的是纪律化执行，外盘迁移本身就是一层筛选，加上止盈止损帮你管住手。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q: 需要哪些配置？</div>
+        <div class="faq-a">A: TG机器人token + Solana钱包私钥 + Helius RPC（免费）。购买后有详细教程。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>Solana Meme Trading Bot · 打刚迁移外盘的币</p>
+    <p class="contact">TG: @jonstarxu</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>
